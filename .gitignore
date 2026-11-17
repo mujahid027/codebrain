@@ -1,0 +1,19 @@
+# Never commit secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated output
+PROJECT_TOUR.md
+context_pack.txt
+
+# Local Claude Code settings
+.claude/
+
+# Node / extension builds
+node_modules/
+*.vsix

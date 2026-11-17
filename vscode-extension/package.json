@@ -1,0 +1,46 @@
+{
+  "name": "codebrain-chat",
+  "displayName": "codebrain - Chat with your codebase",
+  "description": "Ask questions about your project in plain English, right inside VS Code.",
+  "version": "0.0.1",
+  "publisher": "codebrain",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codebrain",
+          "title": "codebrain",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "codebrain": [
+        {
+          "type": "webview",
+          "id": "codebrain.chat",
+          "name": "Chat"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "codebrain",
+      "properties": {
+        "codebrain.pythonPath": {
+          "type": "string",
+          "default": "python",
+          "description": "The command used to run Python (e.g. 'python', 'python3', or a full path)."
+        },
+        "codebrain.bridgePath": {
+          "type": "string",
+          "default": "",
+          "description": "Full path to chat_bridge.py. Leave empty to use the one shipped next to the extension."
+        }
+      }
+    }
+  }
+}

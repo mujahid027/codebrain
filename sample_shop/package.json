@@ -1,0 +1,1 @@
+{ "name": "sample-shop", "dependencies": { "express": "^4", "react": "^18" } }
